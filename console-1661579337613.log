@@ -1,0 +1,150 @@
+var a;
+undefined
+typeof a;
+'undefined'
+a=10;
+10
+typeof a;
+'number'
+a='Amit';
+'Amit'
+typeof a;
+'string'
+a = true;
+true
+typeof a;
+'boolean'
+a = 10000000000;
+10000000000
+typeof a;
+'number'
+a = 100.2100;
+100.21
+typeof a;
+'number'
+a = 1;
+1
+typeof a;
+'number'
+a= Number.MAX_SAFE_INTEGER;
+9007199254740991
+a++; // a = a + 1;
+9007199254740991
+a++;
+9007199254740992
+a++;
+9007199254740992
+a++;
+9007199254740992
+a++;
+9007199254740992
+a++;
+9007199254740992
+a++;
+9007199254740992
+a++;
+9007199254740992
+typeof a;
+'number'
+a = 9007199254740992n; // n makes a big int literal
+9007199254740992n
+typeof a;
+'bigint'
+a++;
+9007199254740992n
+a++;
+9007199254740993n
+a++;
+9007199254740994n
+a++;
+9007199254740995n
+a++;
+9007199254740996n
+a++;
+9007199254740997n
+a = "Amit";
+'Amit'
+typeof a;
+'string'
+a = 'Amit';
+'Amit'
+typeof a;
+'string'
+var age = 26;
+undefined
+console.log("My Age is "+age);
+VM895:1 My Age is 26
+undefined
+var name = "Amit";
+undefined
+console.log("My Name is "+name+" My Age is "+age);
+VM1218:1 My Name is Amit My Age is 26
+undefined
+age = 35;
+35
+console.log("My Name is "+name+" My Age is "+age);
+VM1249:1 My Name is Amit My Age is 35
+undefined
+console.log(`My Name is ${name} My Age is ${age}`);
+VM1424:1 My Name is Amit My Age is 35
+undefined
+var message = `jgdlkgjdflgdfkjggjlkdfj
+jgdklgjdklf gjdflkg
+hgkjdfhdfkj`;
+undefined
+typeof message;
+'string'
+message;
+'jgdlkgjdflgdfkjggjlkdfj\njgdklgjdklf gjdflkg\nhgkjdfhdfkj'
+console.log(message);
+VM1719:1 jgdlkgjdflgdfkjggjlkdfj
+jgdklgjdklf gjdflkg
+hgkjdfhdfkj
+undefined
+var a= "Amit";
+undefined
+a++;
+NaN
+a.push(100);
+VM1816:1 Uncaught TypeError: a.push is not a function
+    at <anonymous>:1:3
+(anonymous) @ VM1816:1
+var a = "ghdkfjhgf\nghdfkjghdjkf\n hgdksjhgf\n";
+undefined
+console.log(a);
+VM1929:1 ghdkfjhgf
+ghdfkjghdjkf
+ hgdksjhgf
+
+undefined
+a = `jhflkhjkflg
+.ljkgfdlk
+jghdfk
+ghdkfj`;
+'jhflkhjkflg\n.ljkgfdlk\njghdfk\nghdkfj'
+console.log(a);
+VM2035:1 jhflkhjkflg
+.ljkgfdlk
+jghdfk
+ghdkfj
+undefined
+var t = 1000;
+undefined
+typeof t;
+'number'
+t = 1000n;
+1000n
+typeof t;
+'bigint'
+var b = BigInt("5454645645645645654646455");
+undefined
+b;
+5454645645645645654646455n
+1000n + 3333n
+4333n
+1000n + 3333;
+VM2358:1 Uncaught TypeError: Cannot mix BigInt and other types, use explicit conversions
+    at <anonymous>:1:7
+(anonymous) @ VM2358:1
+1000n + 3333n;
+4333n
