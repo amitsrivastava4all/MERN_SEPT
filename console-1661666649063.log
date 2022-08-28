@@ -1,0 +1,74 @@
+var a = 10;
+undefined
+var b = a;
+undefined
+b = b + 1;
+11
+a;
+10
+b;
+11
+var arr = [10,20,30,40,50];
+undefined
+var e = arr;
+undefined
+e;
+(5) [10, 20, 30, 40, 50]
+arr;
+(5) [10, 20, 30, 40, 50]
+e[0] = 1000;
+1000
+e;
+(5) [1000, 20, 30, 40, 50]
+arr;
+(5) [1000, 20, 30, 40, 50]
+arr[2] = 8888;
+8888
+arr;
+(5) [1000, 20, 8888, 40, 50]
+e;
+(5) [1000, 20, 8888, 40, 50]
+arr;
+(5) [1000, 20, 8888, 40, 50]
+var t = [...arr];
+undefined
+t;
+(5) [1000, 20, 8888, 40, 50]
+t[0]=2000;
+2000
+t;
+(5) [2000, 20, 8888, 40, 50]
+arr;
+(5) [1000, 20, 8888, 40, 50]
+e;
+(5) [1000, 20, 8888, 40, 50]
+arr == e;
+true
+arr == t;
+false
+var student = {rollno:1001, name:'Amit', course:'JS', att: true, fees:90.20};
+undefined
+typeof student;
+'object'
+var a = [10,20,30,40];
+undefined
+typeof a;
+'object'
+a instanceof Array;
+true
+student instanceof Array;
+false
+student instanceof Object;
+true
+a instanceof Object;
+true
+typeof Object;
+'function'
+Object;
+ƒ Object() { [native code] }
+typeof Array;
+'function'
+Array.prototype.__proto__ ;
+{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+Array.prototype.__proto__  == Object.prototype;
+true

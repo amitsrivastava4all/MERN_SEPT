@@ -1,0 +1,86 @@
+var arr = [10,20,30,40,450];
+undefined
+typeof arr;
+'object'
+arr.length;
+5
+arr.push(1000);
+6
+arr;
+(6) [10, 20, 30, 40, 450, 1000]
+arr.unshift(999);
+7
+arr;
+(7) [999, 10, 20, 30, 40, 450, 1000]
+arr.pop();
+1000
+arr;
+(6) [999, 10, 20, 30, 40, 450]
+arr.shift();
+999
+arr;
+(5) [10, 20, 30, 40, 450]
+var name = "Amit";
+undefined
+typeof name;
+'string'
+var name2 = new String("Amit");
+undefined
+typeof name2;
+'object'
+name2.toUpperCase();
+'AMIT'
+name2.toLowerCase();
+'amit'
+var q = 10;
+undefined
+typeof q;
+'number'
+var q2 = new Number(10);
+undefined
+typeof q2;
+'object'
+var d = "Amit";
+undefined
+typeof d;
+'string'
+d = new String("Amit");
+String {'Amit'}
+typeof d;
+'object'
+var w = true;
+undefined
+typeof w;
+'boolean'
+var w2 = new Boolean(true);
+undefined
+typeof w2;
+'object'
+var empName = "Amit";
+undefined
+typeof empName;
+'string'
+var w = 10;
+undefined
+w;
+10
+var w2 = new Number(10);
+undefined
+w2;
+Number {10}
+var e = "Amit";
+undefined
+typeof e;
+'string'
+e;
+'Amit'
+e.toUpperCase();
+'AMIT'
+e;
+'Amit'
+"Hello "+e;
+'Hello Amit'
+`Hello ${e}`
+'Hello Amit'
+var name = "Amit";
+undefined

@@ -1,0 +1,8 @@
+var name = new String("Amit");
+undefined
+typeof name;
+'string'
+var name2 = new String("Amit");
+undefined
+typeof name2;
+'object'
