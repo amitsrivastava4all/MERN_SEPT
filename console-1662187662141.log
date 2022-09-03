@@ -1,0 +1,26 @@
+var name = "Amit";
+undefined
+name.toUpperCase();
+'AMIT'
+name;
+'Amit'
+var w =name.toUpperCase();
+undefined
+w;
+'AMIT'
+name;
+'Amit'
+var t =  name +" Srivastava";
+undefined
+t;
+'Amit Srivastava'
+name;
+'Amit'
+var r = new String("Rohan");
+undefined
+typeof r;
+'object'
+var x = new String("Amit");
+undefined
+typeof x;
+'object'

@@ -1,0 +1,107 @@
+var e = {id:1001, name:'Ram',salary:9999};
+undefined
+typeof e;
+'object'
+e.id;
+1001
+e['id'];
+1001
+e = null;
+null
+e;
+null
+typeof e;
+'object'
+e.id;
+VM274:1 Uncaught TypeError: Cannot read properties of null (reading 'id')
+    at <anonymous>:1:3
+(anonymous) @ VM274:1
+var t1;
+undefined
+typeof t1;
+'undefined'
+var t2 = {};
+undefined
+typeof t2;
+'object'
+t2 = null;
+null
+typeof t2;
+'object'
+typeof null 
+'object'
+typeof undefined;
+'undefined'
+null == undefined;
+true
+10 == "10"
+
+true
+10==="10"
+false
+undefined === null;
+false
+10 + undefined;
+NaN
+10 + null;
+10
+var f = 100;
+undefined
+typeof f;
+'number'
+f = null;
+null
+typeof f;
+'object'
+f= 0;
+0
+var arr = [10,20,30,34];
+undefined
+typeof arr;
+'object'
+arr = null;
+null
+typeof arr;
+'object'
+arr.length;
+VM955:1 Uncaught TypeError: Cannot read properties of null (reading 'length')
+    at <anonymous>:1:5
+(anonymous) @ VM955:1
+var d = 100;
+undefined
+typeof d;
+'number'
+d = d - "amit";
+NaN
+typeof d;
+'number'
+d = 100/0;
+Infinity
+d;
+Infinity
+typeof d;
+'number'
+d = d - "amit";
+NaN
+isNaN(d);
+true
+d = 10/0;
+Infinity
+isFinite(d);
+false
+d = d - "amit";
+NaN
+isNaN(d)?0:d;
+0
+d;
+NaN
+d=100;
+100
+isNaN(d)?0:d;
+100
+d = 100/0;
+Infinity
+isFinite(d)?d:0;
+0
+isFinite(d)?d:"Infinite Value ";
+'Infinite Value '
