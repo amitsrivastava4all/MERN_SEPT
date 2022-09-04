@@ -1,0 +1,90 @@
+var obj = {id:1001, name:'Amit'}; // Object Literal
+undefined
+obj.id;
+1001
+obj['id'];
+1001
+var dhoni = {50:51,100:22,"first-name":"MS","last-name":"Dhoni"};
+undefined
+dhoni.50;
+VM785:1 Uncaught SyntaxError: Unexpected number
+dhoni.first-name;
+NaN
+obj.id;
+1001
+dhoni[50];
+51
+dhoni[100];
+22
+dhoni['first-name']
+'MS'
+dhoni['last-name']
+'Dhoni'
+var key = "first-name";
+undefined
+dhoni[key];
+'MS'
+dhoni.key;
+undefined
+var arr = [10,20,30,40,50];
+undefined
+for(var i = 0; i<arr.length; i++){
+    console.log(arr[i]);
+}
+VM1259:2 10
+VM1259:2 20
+VM1259:2 30
+VM1259:2 40
+VM1259:2 50
+undefined
+dhoni;
+{50: 51, 100: 22, first-name: 'MS', last-name: 'Dhoni'}
+for(var key in dhoni){
+    console.log(key);
+}
+VM1403:2 50
+VM1403:2 100
+VM1403:2 first-name
+VM1403:2 last-name
+undefined
+for(var key in dhoni){
+    console.log(key + " " + dhoni[key]);
+}
+VM1498:2 50 51
+VM1498:2 100 22
+VM1498:2 first-name MS
+VM1498:2 last-name Dhoni
+undefined
+var prices = [100,200];
+undefined
+prices.push(300);
+3
+prices;
+(3) [100, 200, 300]
+prices.unshift(1000);
+4
+prices;
+(4) [1000, 100, 200, 300]
+prices.pop();
+300
+prices.shift();
+1000
+prices;
+(2) [100, 200]
+prices.push(10,20,30,40,45);
+7
+prices;
+(7) [100, 200, 10, 20, 30, 40, 45]
+for(var price of prices){
+    console.log(price);
+}
+VM2059:2 100
+VM2059:2 200
+VM2059:2 10
+VM2059:2 20
+VM2059:2 30
+VM2059:2 40
+VM2059:2 45
+undefined
+arr.forEach
+ƒ forEach() { [native code] }

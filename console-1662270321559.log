@@ -1,0 +1,52 @@
+console.log('Hello JS ');
+VM147:1 Hello JS 
+undefined
+console.log
+ƒ log() { [native code] }
+function add(){
+    console.log("I am the Add Fn ");
+}
+undefined
+add();
+VM347:2 I am the Add Fn 
+undefined
+isNaN(10-"ten")
+true
+typeof add;
+'function'
+typeof isNaN;
+'function'
+function add(x,y){
+    return x + y;
+}
+undefined
+add(10,20);
+30
+add(100,200);
+300
+function add(x,y){
+    return x - y;
+}
+undefined
+add(100,200);
+-100
+function add(x,y){
+    return x + y;
+}
+undefined
+add("AMit", "Srivastava");
+'AMitSrivastava'
+add(10,20);
+30
+add(true, true);
+2
+add(true, false);
+1
+add([10,20],[90,100]);
+'10,2090,100'
+add(true, false);
+1
+function add(x,y){
+    return x + y;
+}
+undefined
