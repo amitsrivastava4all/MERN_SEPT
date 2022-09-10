@@ -1,0 +1,38 @@
+function add(){
+    console.log(" I am the add ");
+}
+undefined
+add();
+VM292:2  I am the add 
+undefined
+add(10,20,30);
+VM292:2  I am the add 
+undefined
+add(1,2);
+VM292:2  I am the add 
+undefined
+add("10",20,true,[10,20,30]);
+VM292:2  I am the add 
+undefined
+console.dir(add);
+VM568:1 ƒ add()arguments: nullcaller: nulllength: 0name: "add"prototype: {constructor: ƒ}[[FunctionLocation]]: VM292:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+function add(){
+    console.log(" I am the add ", arguments.length);
+}
+undefined
+add();
+VM684:2  I am the add  0
+undefined
+add(10,20);
+VM684:2  I am the add  2
+undefined
+add(10,20,30,40,50);
+VM684:2  I am the add  5
+undefined
+add(10,20,30,40,50,"60");
+VM684:2  I am the add  6
+undefined
+add(10,20,30,40,50,"60",[90,100]);
+VM684:2  I am the add  7
+undefined

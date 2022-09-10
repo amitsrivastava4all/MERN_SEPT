@@ -1,0 +1,164 @@
+function add(){
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++)
+        sum = sum + arguments[i];
+    }
+    return sum;
+}
+VM376:6 Uncaught SyntaxError: Illegal return statement
+function add(){
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++){
+        sum = sum + arguments[i];
+    }
+    return sum;
+}
+undefined
+add();
+0
+add(10,20);
+30
+add(1,2,3,4,5);
+15
+add(1,"2",3,4,5);
+'12345'
+parseInt("2")
+2
+parseInt("2") + 3
+5
+parseInt("AMit");
+NaN
+parseInt("two");
+NaN
+function add(){
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++){
+        sum = sum + parseInt(arguments[i]);
+    }
+    return sum;
+}
+undefined
+add(1,"2",3,4,5);
+15
+add(1,"2",3,4,"five");
+NaN
+10 + NaN;
+NaN
+isNaN(10-"ten")
+true
+function add(){
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++){
+        sum = sum + isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+    }
+    return sum;
+}
+undefined
+add(1,"2",3,4,"five");
+0
+function add(){
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++){
+        sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+add(1,"2",3,4,"five");
+10
+function one(){
+    return 1;
+}
+undefined
+function two(){
+    return "2";
+}
+undefined
+parseInt(one)
+NaN
+parseInt(one())
+1
+parseInt(two());
+2
+add("10",20, 30,one, two,"five");
+60
+function add(){
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i
+        if(typeof arguments[i]==='function'){
+            arguments[i] = arguments[i]();
+        }
+        sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+VM1785:4 Uncaught SyntaxError: Unexpected token 'if'
+function add(){
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++){
+        if(typeof arguments[i]==='function'){
+            arguments[i] = arguments[i]();
+        }
+        sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+add("10",20, 30,one, two,"five");
+63
+function add(){
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++){
+        if(arguments[i] instanceof Array){
+            for(var j = 0; j<arguments[i].length; j++){
+                sum = sum + (isNaN(parseInt(arguments[i][j]))?0:parseInt(arguments[i][j]));
+            }
+            continue; // Skip the current iteration
+        } // Array Condition
+        if(typeof arguments[i]==='function'){
+            arguments[i] = arguments[i]();
+        }
+        sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+add("10",20, 30,one, two,[1,2,3,4],"2",1, "five");
+76
+function jQuery(){
+    console.log("I am jQuery");
+}
+undefined
+jQuery(document);
+VM2602:2 I am jQuery
+undefined
+jQuery('p');
+VM2602:2 I am jQuery
+undefined
+var $ = jQuery;
+undefined
+$(document);
+VM2602:2 I am jQuery
+undefined
+$('p');
+VM2602:2 I am jQuery
+undefined
+function add(){
+    var sum = 0;
+    for(let i = 0; i<arguments.length; i++){
+        if(arguments[i] instanceof Array){
+            for(let j = 0; j<arguments[i].length; j++){
+                sum = sum + (isNaN(parseInt(arguments[i][j]))?0:parseInt(arguments[i][j]));
+            }
+            continue; // Skip the current iteration
+        } // Array Condition
+        if(typeof arguments[i]==='function'){
+            arguments[i] = arguments[i]();
+        }
+        sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+add("10",20, 30,one, two,[1,2,3,4],"2",1, "five");
+76

@@ -1,0 +1,26 @@
+var x;
+undefined
+typeof x;
+'undefined'
+var y ={};
+undefined
+y = null ; // No Reference
+null
+typeof null;
+'object'
+undefined == null;
+true
+undefined === null;
+false
+typeof undefined;
+'undefined'
+typeof null;
+'object'
+10 + "one"
+'10one'
+undefined +10
+NaN
+null+ 10
+10
+10 + true;
+11
