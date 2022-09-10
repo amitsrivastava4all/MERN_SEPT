@@ -1,0 +1,26 @@
+
+Function Types in JS
+1. Function Deceleration Style
+2. 
+3.
+4.
+5. 
+
+
+Hoisting
+a) Variable Hositing (var vs let)
+b) Function Hositing
+
+add() - 0
+add(10,20) - 30
+add(1,2,3,4,5) - 15
+add(1,”2”,3,4,5) - 15
+add(1,”2”,3,4,”five”) - 10
+add(1,2,[3,”4”],”5”) - 15
+function one(){
+return 1;
+}  
+function two(){
+return “2”;
+} 
+add(one, two,[3,”4”,one],”1”,1); 13
