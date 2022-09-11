@@ -1,0 +1,133 @@
+show();
+function show(){
+    console.log("I am Show ");
+}
+VM197:3 I am Show 
+undefined
+typeof window;
+'object'
+window instanceof Window;
+true
+typeof Window;
+'function'
+window.show;
+ƒ show(){
+    console.log("I am Show ");
+}
+show(); // window.show();
+VM197:3 I am Show 
+undefined
+window.show();
+VM197:3 I am Show 
+undefined
+var t =200; // Attach with window
+undefined
+window.t;
+200
+function test(){
+    // var g;
+    console.log(g);
+    if(10>2){
+        var g = 2000;
+    }
+    console.log(g);
+}
+undefined
+test();
+VM774:3 undefined
+VM774:7 2000
+undefined
+window.test();
+VM774:3 undefined
+VM774:7 2000
+undefined
+window.t;
+200
+window.g;
+undefined
+var fn =function(){
+    console.log("I am the Anonymous Fn ");
+}
+undefined
+typeof fn;
+'function'
+fn();
+VM1174:2 I am the Anonymous Fn 
+undefined
+fn2();
+var fn2 =function(){
+    console.log("I am the Anonymous Fn ");
+}
+VM1245:1 Uncaught TypeError: fn2 is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM1245:1
+function Calc(){
+    var add = function(x,y){
+        return x+y;
+    }
+    var sub = function(x,y){
+        return x-y;
+    }
+    return [add, sub];
+}
+undefined
+window.Calc;
+ƒ Calc(){
+    var add = function(x,y){
+        return x+y;
+    }
+    var sub = function(x,y){
+        return x-y;
+    }
+    return [add, sub];
+}
+window.sub;
+undefined
+var arr = Calc();
+undefined
+arr;
+(2) [ƒ, ƒ]0: ƒ (x,y)arguments: nullcaller: nulllength: 2name: "add"prototype: {constructor: ƒ}[[FunctionLocation]]: VM1736:2[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]1: ƒ (x,y)length: 2[[Prototype]]: Array(0)
+arr[0](100,200);
+300
+arr[1](100,200);
+-100
+function Calc(){
+    var add = function addition(x,y){
+        return x+y;
+    }
+    var sub = function subtraction(x,y){
+        return x-y;
+    }
+    return [add, sub];
+}
+undefined
+var w = Calc();
+undefined
+w;
+(2) [ƒ, ƒ]0: ƒ addition(x,y)1: ƒ subtraction(x,y)length: 2[[Prototype]]: Array(0)
+w[0](10,20);
+30
+function Calc(){
+    var add = function (x,y){
+        return x+y;
+    }
+    var sub = function (x,y){
+        return x-y;
+    }
+    return {add, sub}; // es6 object shorthand
+}
+undefined
+var f =Calc();
+undefined
+f;
+{add: ƒ, sub: ƒ}
+f.add(10,20);
+30
+f.sub(10,20);
+-10
+f['add'](10,20);
+30
+Calc().add(10,20);
+30
+Calc()['add'](10,20);
+30

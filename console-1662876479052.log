@@ -1,0 +1,25 @@
+function add(){
+    var sum = 0;
+    for(let i = 0; i<arguments.length; i++){
+        if(arguments[i] instanceof Array){
+            for(let j = 0; j<arguments[i].length; j++){
+                sum = sum + (isNaN(parseInt(arguments[i][j]))?0:parseInt(arguments[i][j]));
+            }
+            continue; // Skip the current iteration
+        } // Array Condition
+        if(typeof arguments[i]==='function'){
+            arguments[i] = arguments[i]();
+        }
+        sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+function one(){
+    return 1;
+}
+undefined
+function two(){
+    return "2";
+}
+undefined
