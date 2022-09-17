@@ -1,0 +1,18 @@
+function show(){
+    console.log("I am show ");
+}
+undefined
+var e = function(){
+    console.log("I am the Anonymous fn ");
+}
+undefined
+var e2 = function disp(){
+    console.log("I am the Named Function Expression ");
+}
+undefined
+var t = 100;
+undefined
+typeof t;
+'number'
+typeof e;
+'function'

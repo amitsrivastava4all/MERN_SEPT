@@ -1,0 +1,69 @@
+var prices = [1000,200,300,4000,5000,6000];
+var pricesWithGst = [];
+for(let i= 0; i<prices.length; i++){
+    let gst = prices[i] * 0.18;
+    pricesWithGst.push(prices[i] + gst);
+}
+console.log(pricesWithGst);
+VM538:7 (6) [1180, 236, 354, 4720, 5900, 7080]
+undefined
+prices;
+(6) [1000, 200, 300, 4000, 5000, 6000]
+pricesWithGst
+(6) [1180, 236, 354, 4720, 5900, 7080]
+function test(a,b){
+    return a + b + c;
+}
+undefined
+window.test;
+ƒ test(a,b){
+    return a + b + c;
+}
+var c = 100;.
+VM723:1 Uncaught SyntaxError: Unexpected token '.'
+var c = 100;
+undefined
+test(1,2);
+103
+c = 12000;
+12000
+test(1,2);
+12003
+c = "Amit";
+'Amit'
+test(1,2);
+'3Amit'
+c = undefined;
+undefined
+test(1,2);
+NaN
+var arr = [10,20,30,40,450,50,90,100];
+undefined
+arr.forEach
+ƒ forEach() { [native code] }
+function printIt(element){
+    console.log(element);
+}
+arr.forEach(printIt);
+VM1256:2 10
+VM1256:2 20
+VM1256:2 30
+VM1256:2 40
+VM1256:2 450
+VM1256:2 50
+VM1256:2 90
+VM1256:2 100
+undefined
+function printIt(element, index){
+    console.log(element , index);
+}
+arr.forEach(printIt);
+VM1337:2 10 0
+VM1337:2 20 1
+VM1337:2 30 2
+VM1337:2 40 3
+VM1337:2 450 4
+VM1337:2 50 5
+VM1337:2 90 6
+VM1337:2 100 7
+undefined

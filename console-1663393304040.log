@@ -1,0 +1,10 @@
+window;
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+window.navigator.cookieEnabled;
+true
+window.screen.height;
+982
+window.screen.width;
+1512
+window.open('https://www.brain-mentors.com');
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}
