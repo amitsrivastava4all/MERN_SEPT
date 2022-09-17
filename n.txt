@@ -1,0 +1,12 @@
+Functional Prg
+1. Programming Paradigm
+2. JS Use Functional Pro
+3. Functions are No-1 Citizen
+4. Declarative Approach
+5. Pass Functions as Argument, Return Function , Nested Functions
+6. Function as a Data Type
+7. Pure Functions 
+8. No Side Effects
+9. Easy to Debug, Easy to Understand, Easy to maintain.
+10. Lambda Functions 
+11. Code Length Reduce
