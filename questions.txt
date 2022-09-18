@@ -1,0 +1,23 @@
+Q1. Find Highest Element in the Given Array
+
+Q2. Find all the Highest Element of the Given Value
+e.g arr = [10,20,30,40,50,60,70,80,90];
+element = 50
+All the Element greater than 50 reterive
+Try this with reduce only
+
+Q3. Delete all the Element from the given array , delete those which is greater than 30 and less than 100.
+Try the same with reduce only
+
+Q4. Sort the Given Names in Ascending Order.
+Hint : Sort function
+
+Q5. Sort the Array which contains the Objects
+Example : Like in Amazon we have products (id, name, price, discount, qty)
+Now Sort the array by name or by price or by discount
+
+Q6. Given an Array Contain the Date of the Products 
+Format the Date in DD-MONTH-YYYY Format
+18-Sept-2022
+Hint : new Date()
+
