@@ -1,0 +1,329 @@
+var arr = [10,20,30,40,450,50];
+function printIt(element, index){
+    console.log(element , index);
+}
+arr.forEach(printIt);
+VM74:3 10 0
+VM74:3 20 1
+VM74:3 30 2
+VM74:3 40 3
+VM74:3 450 4
+VM74:3 50 5
+undefined
+const pr = (ele,i)=>console.log(ele,i);
+undefined
+arr.forEach(pr);
+VM218:1 10 0
+VM218:1 20 1
+VM218:1 30 2
+VM218:1 40 3
+VM218:1 450 4
+VM218:1 50 5
+undefined
+arr.forEach((ele, i)=>console.log(ele,i));
+VM439:1 10 0
+VM439:1 20 1
+VM439:1 30 2
+VM439:1 40 3
+VM439:1 450 4
+VM439:1 50 5
+undefined
+function add(x,y){
+    return x + y;
+}
+undefined
+add(10,20);
+30
+const adder = (x,y)=>x+y;
+undefined
+adder(10,20);
+30
+const adder2 = (x,y)=>{
+    console.log('X is ',x,' Y is ',y);
+    return x + y;
+}
+undefined
+adder2(100,200);
+VM870:2 X is  100  Y is  200
+300
+const show = e=>console.log(e);
+undefined
+show(10);
+VM1037:1 10
+undefined
+const r = ()=>console.log("I am Arrow ");
+undefined
+r();
+VM1226:1 I am Arrow 
+undefined
+arr;
+(6) [10, 20, 30, 40, 450, 50]
+arr.push(7777);
+7
+arr;
+(7) [10, 20, 30, 40, 450, 50, 7777]
+arr.pop();
+7777
+arr;
+(6) [10, 20, 30, 40, 450, 50]
+arr.indexOf(20);
+1
+arr.find(ele=>ele>40);
+450
+arr.find(ele=>ele>450);
+undefined
+arr.findIndex(e=>ele>40);
+VM1634:1 Uncaught ReferenceError: ele is not defined
+    at <anonymous>:1:21
+    at Array.findIndex (<anonymous>)
+    at <anonymous>:1:5
+(anonymous) @ VM1634:1
+(anonymous) @ VM1634:1
+arr.findIndex(e=>e>40);
+4
+arr.findIndex(e=>e>450);
+-1
+arr.filter(e=>e>40);
+(2) [450, 50]
+arr.filter(e=>e>4000);
+[]
+var t = arr.filter(e=>true);
+undefined
+t;
+(6) [10, 20, 30, 40, 450, 50]
+arr;
+(6) [10, 20, 30, 40, 450, 50]
+t===arr;
+false
+t[0] = 11111;
+11111
+t;
+(6) [11111, 20, 30, 40, 450, 50]
+arr;
+(6) [10, 20, 30, 40, 450, 50]
+arr;
+(6) [10, 20, 30, 40, 450, 50]
+arr.splice(1);
+(5) [20, 30, 40, 450, 50]
+arr;
+[10]
+var arr = [10,20,30,40,450,50];
+
+undefined
+arr.splice(2,2)
+(2) [30, 40]
+arr;
+(4) [10, 20, 450, 50]
+arr.unshift();
+4
+arr.shift();
+10
+arr;
+(3) [20, 450, 50]
+arr.unshift(10000);
+4
+arr;
+(4) [10000, 20, 450, 50]
+var arr = [10,20,30,40,450,50];
+
+undefined
+arr.splice(1,1,8888);
+[20]
+arr;
+(6) [10, 8888, 30, 40, 450, 50]
+arr.splice(1,0,77777);
+[]
+arr;
+(7) [10, 77777, 8888, 30, 40, 450, 50]
+arr;
+(7) [10, 77777, 8888, 30, 40, 450, 50]
+arr = arr.filter(e=>e<=40);
+(3) [10, 30, 40]
+arr;
+(3) [10, 30, 40]
+var arr = [10,20,30,40,450,50];
+
+undefined
+var prices = [1000,200,300,4000,5000,6000];
+var pricesWithGst = [];
+for(let i= 0; i<prices.length; i++){
+    let gst = prices[i] * 0.18;
+    pricesWithGst.push(prices[i] + gst);
+}
+console.log(pricesWithGst);
+VM2849:7 (6) [1180, 236, 354, 4720, 5900, 7080]
+undefined
+prices;
+(6) [1000, 200, 300, 4000, 5000, 6000]
+pricesWithGst;
+(6) [1180, 236, 354, 4720, 5900, 7080]
+var pricesWithTax = arr.map(e=>e + e*0.18)
+undefined
+arr;
+(6) [10, 20, 30, 40, 450, 50]
+pricesWithTax
+(6) [11.8, 23.6, 35.4, 47.2, 531, 59]
+prices;
+(6) [1000, 200, 300, 4000, 5000, 6000]
+var p = 2000000;
+undefined
+p.toLocaleString('hi');
+'20,00,000'
+p.toLocaleString('en');
+'2,000,000'
+p.toLocaleString('fr');
+'2 000 000'
+p.toLocaleString('jp');
+'2,000,000'
+prices.map(p=>'Rs '+p.toLocaleString('hi'));
+(6) ['Rs 1,000', 'Rs 200', 'Rs 300', 'Rs 4,000', 'Rs 5,000', 'Rs 6,000']
+var formattedPrices = prices.map(p=>'Rs '+p.toLocaleString('hi'));
+undefined
+prices;
+(6) [1000, 200, 300, 4000, 5000, 6000]
+formattedPrices;
+(6) ['Rs 1,000', 'Rs 200', 'Rs 300', 'Rs 4,000', 'Rs 5,000', 'Rs 6,000']
+prices;
+(6) [1000, 200, 300, 4000, 5000, 6000]
+const clonePrices = prices.map(p=>p);
+undefined
+prices;
+(6) [1000, 200, 300, 4000, 5000, 6000]
+clonePrices;
+(6) [1000, 200, 300, 4000, 5000, 6000]
+prices === clonePrices;
+false
+prices[0]=99999;
+99999
+prices;
+(6) [99999, 200, 300, 4000, 5000, 6000]
+clonePrices;
+(6) [1000, 200, 300, 4000, 5000, 6000]
+const w = [...prices];
+undefined
+w;
+(6) [99999, 200, 300, 4000, 5000, 6000]
+w[0] = 10000;
+10000
+w;
+(6) [10000, 200, 300, 4000, 5000, 6000]
+prices;
+(6) [99999, 200, 300, 4000, 5000, 6000]
+var obj = {id:1001, name:'Ram'};
+undefined
+var obj2 = {salary:9999, id:1002, bonus:888};
+undefined
+var obj3 = {obj, obj2};
+undefined
+obj3;
+{obj: {…}, obj2: {…}}obj: {id: 1001, name: 'Ram'}obj2: {salary: 9999, id: 1002, bonus: 888}[[Prototype]]: Object
+obj.id = 10000;
+10000
+obj3.obj.id;
+10000
+var obj4 = {...obj, ...obj2};
+undefined
+obj4;
+{id: 1002, name: 'Ram', salary: 9999, bonus: 888}
+var obj5 = {id:1001, name:'Ram', address:{city:'Delhi', pincode:110007}};
+undefined
+var obj6 = {...obj5};
+undefined
+obj6;
+{id: 1001, name: 'Ram', address: {…}}address: {city: 'Delhi', pincode: 110007}id: 1001name: "Ram"[[Prototype]]: Object
+obj5.address.city='Mumbai';
+'Mumbai'
+obj6.address;
+{city: 'Mumbai', pincode: 110007}
+obj5.name = 'Ramesh';
+'Ramesh'
+obj6.name;
+'Ram'
+prices;
+(6) [99999, 200, 300, 4000, 5000, 6000]
+prices.reduce((acc, currentPrice)=>acc + currentPrice, 0)
+115499
+prices.reduce((sum, currentPrice)=>sum + currentPrice, 0)
+115499
+prices.reduce((sum, currentPrice)=>sum + currentPrice)
+115499
+prices.reduce((sum, currentPrice)=>{
+    if(currentPrice>4000){
+    return sum + currentPrice;
+    }
+    )
+VM4960:5 Uncaught SyntaxError: Unexpected token ')'
+prices.reduce((sum, currentPrice)=>{
+    if(currentPrice>4000){
+    return sum + currentPrice;
+    }
+}
+    );
+NaN
+prices.reduce((sum, currentPrice)=>{
+    if(currentPrice>4000){
+    return sum + currentPrice;
+    }
+    return sum;
+}
+    );
+110999
+prices = [1000,2000,3000,4000,5000,6000];
+(6) [1000, 2000, 3000, 4000, 5000, 6000]
+prices.reduce((sum, currentPrice)=>{
+    if(currentPrice>4000){
+    return sum + currentPrice;
+    }
+    return sum;
+}
+    );
+12000
+sum;
+VM5155:1 Uncaught ReferenceError: sum is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM5155:1
+prices.reduce((sum, currentPrice)=>{
+    if(currentPrice>4000){
+    return sum + currentPrice;
+    }
+    return 0;
+}
+    );
+11000
+prices.reduce((sum, currentPrice)=>{
+    if(currentPrice>4000){
+    return sum + currentPrice;
+    }
+    return 0;
+}
+    );
+11000
+prices.reduce((sum, currentPrice)=>{
+    console.log(sum, currentPrice);
+    if(currentPrice>4000){
+    return sum + currentPrice;
+    }
+    return 0;
+}
+    );
+VM5309:2 1000 2000
+VM5309:2 0 3000
+VM5309:2 0 4000
+VM5309:2 0 5000
+VM5309:2 5000 6000
+11000
+prices.reduce((sum, currentPrice)=>{
+    console.log(sum, currentPrice);
+    if(currentPrice>4000){
+    return sum + currentPrice;
+    }
+    return sum;
+},0
+    );
+VM5338:2 0 1000
+VM5338:2 0 2000
+VM5338:2 0 3000
+VM5338:2 0 4000
+VM5338:2 0 5000
+VM5338:2 5000 6000
+11000
