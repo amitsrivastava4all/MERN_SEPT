@@ -1,0 +1,17 @@
+var arr = [100,88,99,200];
+undefined
+arr.reduce((max, currentElement)=>{
+    console.log(max, currentElement);
+})
+VM463:2 100 88
+VM463:2 undefined 99
+VM463:2 undefined 200
+undefined
+arr.reduce((max, currentElement)=>{
+    if(currentElement>max){
+        max = currentElement;
+    }
+    return max;
+    //console.log(max, currentElement);
+});
+200

@@ -1,0 +1,57 @@
+var arr = [10,20,30,40,100,7,88,90];
+undefined
+arr = arr.filter(ele=>!(ele>=40));
+(4) [10, 20, 30, 7]
+arr;
+(4) [10, 20, 30, 7]
+var arr = [10,20,30,40,100,7,88,90];
+undefined
+ arr = arr.reduce((resultArr,ele)=>{
+    if(ele<40){
+        resultArr.push(ele);
+    }
+    return resultArr;
+} , []);
+(4) [10, 20, 30, 7]
+arr;
+(4) [10, 20, 30, 7]
+var arr = [10,20,30,40,100,7,88,90];
+undefined
+arr = [];
+[]
+var arr = [10,20,30,40,100,7,88,90];
+undefined
+arr.length=0;
+0
+arr;
+[]
+var arr = [10,20,30,40,100,7,88,90];
+undefined
+arr.length=4;
+4
+arr;
+(4) [10, 20, 30, 40]
+var arr = [10,20,30,40,100,7,88,90];
+undefined
+arr = arr.filter(ele=>false);
+[]
+arr;
+[]
+arr = arr.reduce((result, e)=>[])
+VM916:1 Uncaught TypeError: Reduce of empty array with no initial value
+    at Array.reduce (<anonymous>)
+    at <anonymous>:1:11
+(anonymous) @ VM916:1
+var arr = [10,20,30,40,100,7,88,90];
+undefined
+arr = arr.reduce((result, e)=>[])
+[]
+var arr = [10,20,30,40,100,7,88,90,100,10,20,1,10];
+undefined
+arr.reduce((result , ele)=>{
+    if(result.indexOf(ele)==-1){
+        result.push(ele);
+    }
+    return result;
+}, []);
+(9) [10, 20, 30, 40, 100, 7, 88, 90, 1]

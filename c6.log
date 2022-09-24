@@ -1,0 +1,60 @@
+var prices = [9000,10000,2000,3000,40000,500050, 66664434];
+undefined
+prices.map(price=>'Rs '+price.toLocaleString('hi-IN'));
+(7) ['Rs 9,000', 'Rs 10,000', 'Rs 2,000', 'Rs 3,000', 'Rs 40,000', 'Rs 5,00,050', 'Rs 6,66,64,434']
+var date = new Date();
+undefined
+date;
+Sat Sep 24 2022 11:30:35 GMT+0530 (India Standard Time)
+date.toLocaleDateString('en-US');
+'9/24/2022'
+date.toLocaleDateString('hi-IN');
+'24/9/2022'
+date.toLocaleDateString('ja-JP');
+'2022/9/24'
+var date2 = new Date();
+undefined
+date2.setMonth(12);
+1674540094652
+date2;
+Tue Jan 24 2023 11:31:34 GMT+0530 (India Standard Time)
+date2.setMonth(11);
+1703397694652
+date2;
+Sun Dec 24 2023 11:31:34 GMT+0530 (India Standard Time)
+date2.setMonth(0);
+1674540094652
+date2;
+Tue Jan 24 2023 11:31:34 GMT+0530 (India Standard Time)
+var dates = [date, date2];
+undefined
+dates;
+(2) [Sat Sep 24 2022 11:30:35 GMT+0530 (India Standard Time), Tue Jan 24 2023 11:31:34 GMT+0530 (India Standard Time)]0: Sat Sep 24 2022 11:30:35 GMT+0530 (India Standard Time) {}1: Tue Jan 24 2023 11:31:34 GMT+0530 (India Standard Time) {}length: 2[[Prototype]]: Array(0)
+dates.map(d=>d.toLocaleDateString('hi-IN'));
+(2) ['24/9/2022', '24/1/2023']
+prices;
+(7) [9000, 10000, 2000, 3000, 40000, 500050, 66664434]
+prices.sort((first, second)=>first-second);
+(7) [2000, 3000, 9000, 10000, 40000, 500050, 66664434]
+prices;
+(7) [2000, 3000, 9000, 10000, 40000, 500050, 66664434]
+prices.sort((first, second)=>second-FinalizationRegistry);
+(7) [2000, 3000, 9000, 10000, 40000, 500050, 66664434]
+prices.sort((first, second)=>second-first);
+(7) [66664434, 500050, 40000, 10000, 9000, 3000, 2000]
+var names = ["ram","shyam","amit","tim", "kim"];
+undefined
+"ram"-"shyam"
+NaN
+"ram".localeCompare("shyam");
+-1
+"shyam".localeCompare("ram");
+1
+"ram".localeCompare("ram");
+0
+names;
+(5) ['ram', 'shyam', 'amit', 'tim', 'kim']
+names.sort((first, second)=>first.localeCompare(second));
+(5) ['amit', 'kim', 'ram', 'shyam', 'tim']
+names.sort((first, second)=>second.localeCompare(first));
+(5) ['tim', 'shyam', 'ram', 'kim', 'amit']

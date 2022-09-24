@@ -1,0 +1,18 @@
+var arr = [10,20,10,20,100,90,50,55,50,40,45,60,90];
+undefined
+arr.indexOf(10);
+0
+arr.indexOf(100);
+4
+arr.indexOf(1000);
+-1
+arr.reduce((result,ele)=>{
+    if(result.length==0){
+        result.push(ele);
+    }
+    else if(result.indexOf(ele)===-1){
+        result.push(ele);
+    }
+    return result;
+},[]);
+(9) [10, 20, 100, 90, 50, 55, 40, 45, 60]

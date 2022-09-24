@@ -1,0 +1,25 @@
+var arr = [10,20,30,40,100,7,88,90];
+undefined
+arr.filter(ele=>ele>=30);
+(5) [30, 40, 100, 88, 90]
+arr.reduce((resultArr, ele)=>{
+    if(ele>=30){
+        resultArr.push(ele);
+    
+    return resultArr;
+},[]);
+VM463:6 Uncaught SyntaxError: Unexpected token ','
+arr.reduce((resultArr, ele)=>{
+    if(ele>=30){
+        resultArr.push(ele);
+    }
+    return resultArr;
+},[]);
+(5) [30, 40, 100, 88, 90]
+arr.reduce((resultArr, ele)=>{
+    if(ele>=30000){
+        resultArr.push(ele);
+    }
+    return resultArr;
+},[]);
+[]

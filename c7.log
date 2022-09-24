@@ -1,0 +1,10 @@
+var price= 100000;
+undefined
+price.toLocaleString('en-US');
+'100,000'
+price.toLocaleString('fr-FR');
+'100 000'
+price.toLocaleString('ja-JP');
+'100,000'
+price.toLocaleString('hi-IN');
+'1,00,000'
