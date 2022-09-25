@@ -1,0 +1,10 @@
+var d = new Date(); // System Date
+undefined
+d;
+Sun Sep 25 2022 10:16:37 GMT+0530 (India Standard Time)
+d.setMonth(1);
+1645764397807
+d.setYear(1999);
+919917997807
+d;
+Thu Feb 25 1999 10:16:37 GMT+0530 (India Standard Time)
