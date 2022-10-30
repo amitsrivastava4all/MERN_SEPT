@@ -1,0 +1,74 @@
+function add(x,y){
+    return x + y;
+}
+var c = add(10,20);
+console.log(c);
+VM197:5 30
+undefined
+function doWork(x,y){
+  setTimeout(()=>{
+      return x + y;
+  },3000);  
+}
+undefined
+var d = doWork();
+undefined
+d;
+undefined
+function getResult(result){
+    console.log('Result is ', result);
+}
+undefined
+function doWork(x,y, callBackFn){
+  setTimeout(()=>{
+      callBackFn(x+y);
+      //return x + y;
+  },3000);  
+}
+undefined
+doWork(10,20,getResult);
+
+undefined
+VM616:2 Result is  30
+function fourTime(t){
+    console.log('Final Result ',t);
+}
+function square(r){
+    setTimeout(()=>fourTime(num**4),3000);
+}
+
+function firstCube(e){
+    setTimeout(()=>square(num**2),3000);
+}
+function cube(num, fn){
+    setTimeout(()=>fn(num**3),2000);
+}
+cube(3,firstCube);
+
+undefined
+VM1592:9 Uncaught ReferenceError: num is not defined
+    at <anonymous>:9:27
+(anonymous) @ VM1592:9
+setTimeout (async)
+firstCube @ VM1592:9
+(anonymous) @ VM1592:12
+setTimeout (async)
+cube @ VM1592:12
+(anonymous) @ VM1592:14
+function fourTime(t){
+    console.log('Final Result ',t);
+}
+function square(r){
+    setTimeout(()=>fourTime(r**4),3000);
+}
+
+function firstCube(e){
+    setTimeout(()=>square(e**2),3000);
+}
+function cube(num, fn){
+    setTimeout(()=>fn(num**3),2000);
+}
+cube(3,firstCube);
+
+undefined
+VM1613:2 Final Result  282429536481
