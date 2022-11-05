@@ -1,0 +1,137 @@
+function cube(num,time){
+    var pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num<=10){
+                resolve(num**3); 
+            }
+            else{
+                reject("Number is too big for Cube " + num);
+            }
+        }, time);
+    });
+    return pr;
+}
+
+undefined
+var p = cube(3);
+p.then(data=>{
+    console.log('First Cube is 
+    var p2 = cube(data);
+    p2.then(data=>{
+        
+    }
+}
+VM374:3 Uncaught SyntaxError: Invalid or unexpected token
+console.log('Cube of 3 ');
+var p = cube(3);
+p.then(data=>{
+    console.log('First Cube is ', data);
+    var p2 = cube(data);
+    p2.then(data=>{
+        console.log('Second Cube is ', data);
+        var p3 = cube(data);
+        p3.then(data=>{
+            console.log('Third Cube is ', data);
+        }).catch(err=>console.log('Third Cube Error ',err));
+    }
+}).catch(err=>console.log('Err ', err));
+VM1464:12 Uncaught SyntaxError: missing ) after argument list
+console.log('Cube of 3 ');
+var p = cube(3);
+p.then(data=>{
+    console.log('First Cube is ', data);
+    var p2 = cube(data);
+    p2.then(data=>{
+        console.log('Second Cube is ', data);
+        var p3 = cube(data);
+        p3.then(data=>{
+            console.log('Third Cube is ', data);
+        }).catch(err=>console.log('Third Cube Error ',err));
+    }}
+).catch(err=>console.log('Err ', err));
+
+       
+VM1519:12 Uncaught SyntaxError: missing ) after argument list
+console.log('Cube of 3 ');
+var p = cube(3);
+p.then(data=>{
+    console.log('First Cube is ', data);
+    var p2 = cube(data);
+    p2.then(data=>{
+        console.log('Second Cube is ', data);
+        var p3 = cube(data);
+        p3.then(data=>{
+            console.log('Third Cube is ', data);
+        }).catch(err=>console.log('Third Cube Error ',err));
+    })}
+).catch(err=>console.log('Err ', err));
+
+       
+VM1540:1 Cube of 3 
+Promise {<pending>}
+VM1540:4 First Cube is  27
+about:blank:1 Uncaught (in promise) Number is too big for Cube 27
+Promise.then (async)
+(anonymous) @ VM1540:6
+Promise.then (async)
+(anonymous) @ VM1540:3
+console.log('Cube of 3 ');
+var p = cube(2);
+p.then(data=>{
+    console.log('First Cube is ', data);
+    var p2 = cube(data);
+    p2.then(data=>{
+        console.log('Second Cube is ', data);
+        var p3 = cube(data);
+        p3.then(data=>{
+            console.log('Third Cube is ', data);
+        }).catch(err=>console.log('Third Cube Error ',err));
+    })}
+).catch(err=>console.log('Err ', err));
+
+       
+VM1554:1 Cube of 3 
+Promise {<pending>}
+VM1554:4 First Cube is  8
+VM1554:7 Second Cube is  512
+VM1554:11 Third Cube Error  Number is too big for Cube 512
+console.log('Cube of 3 ');
+var p = cube(2,4000);
+p.then(data=>{
+    console.log('First Cube is ', data);
+    var p2 = cube(data,1000);
+    p2.then(data=>{
+        console.log('Second Cube is ', data);
+        var p3 = cube(data,5000);
+        p3.then(data=>{
+            console.log('Third Cube is ', data);
+        }).catch(err=>console.log('Third Cube Error ',err));
+    })}
+).catch(err=>console.log('Err ', err));
+
+       
+VM1624:1 Cube of 3 
+Promise {<pending>}
+VM1624:4 First Cube is  8
+VM1624:7 Second Cube is  512
+VM1624:11 Third Cube Error  Number is too big for Cube 512
+console.log('Cube of 2 ');
+var p = cube(2,4000);
+p.then(data=>{
+    console.log('First Cube is ', data);
+    var p2 = cube(data,1000);
+    p2.then(data=>{
+        console.log('Second Cube is ', data);
+        var p3 = cube(data,5000);
+        p3.then(data=>{
+            console.log('Third Cube is ', data);
+        }).catch(err=>console.log('Third Cube Error ',err));
+    })}
+).catch(err=>console.log('Err ', err));
+
+       
+VM1633:1 Cube of 2 
+Promise {<pending>}
+VM1633:4 First Cube is  8
+VM1633:7 Second Cube is  512
+VM1633:11 Third Cube Error  Number is too big for Cube 512

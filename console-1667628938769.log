@@ -1,0 +1,176 @@
+function cube(num,time){
+    var pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num<=10){
+                resolve(num**3); 
+            }
+            else{
+                reject("Number is too big for Cube " + num);
+            }
+        }, time);
+    });
+    return pr;
+}
+Promise.all([cube(3,1000), cube(4,2000), cube(5,5000)]).then(results=>console.log(results)).catch(err=>console.log('Error is ', err));
+Promise {<pending>}
+VM1283:14 (3) [27, 64, 125]
+function cube(num,time){
+    var pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num<=10){
+                resolve(num**3); 
+            }
+            else{
+                reject("Number is too big for Cube " + num);
+            }
+        }, time);
+    });
+    return pr;
+}
+Promise.all([cube(300,1000), cube(4,2000), cube(5,5000)]).then(results=>console.log(results)).catch(err=>console.log('Error is ', err));
+Promise {<pending>}
+VM1298:14 Error is  Number is too big for Cube 300
+function cube(num,time){
+    var pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num<=10){
+                resolve(num**3); 
+            }
+            else{
+                reject("Number is too big for Cube " + num);
+            }
+        }, time);
+    });
+    return pr;
+}
+Promise.all([cube(300,1000), cube(4,2000), cube(5,5000)]).then(results=>console.log(results)).catch(err=>console.log('Error is ', err));
+Promise {<pending>}
+VM1306:14 Error is  Number is too big for Cube 300
+function cube(num,time){
+    var pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num<=10){
+                resolve(num**3); 
+            }
+            else{
+                reject("Number is too big for Cube " + num);
+            }
+        }, time);
+    });
+    return pr;
+}
+Promise.allSettled([cube(300,1000), cube(4,2000), cube(5,5000)]).then(results=>console.log(results)).catch(err=>console.log('Error is ', err));
+Promise {<pending>}
+VM1332:14 (3) [{…}, {…}, {…}]0: {status: 'rejected', reason: 'Number is too big for Cube 300'}1: {status: 'fulfilled', value: 64}2: {status: 'fulfilled', value: 125}length: 3[[Prototype]]: Array(0)
+function cube(num,time){
+    var pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num<=10){
+                resolve(num**3); 
+            }
+            else{
+                reject("Number is too big for Cube " + num);
+            }
+        }, time);
+    });
+    return pr;
+}
+Promise.allSettled([cube(300,1000), cube(4,2000), cube(5,5000)]).then(results=>console.log(results)).catch(err=>console.log('Error is ', err));
+Promise {<pending>}
+VM1336:14 (3) [{…}, {…}, {…}]0: {status: 'rejected', reason: 'Number is too big for Cube 300'}1: {status: 'fulfilled', value: 64}2: {status: 'fulfilled', value: 125}length: 3[[Prototype]]: Array(0)
+function cube(num,time){
+    var pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num<=10){
+                resolve(num**3); 
+            }
+            else{
+                reject("Number is too big for Cube " + num);
+            }
+        }, time);
+    });
+    return pr;
+}
+Promise.race([cube(300,1000), cube(4,2000), cube(5,5000)]).then(results=>console.log(results)).catch(err=>console.log('Error is ', err));
+Promise {<pending>}
+VM1361:14 Error is  Number is too big for Cube 300
+function cube(num,time){
+    var pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num<=10){
+                resolve(num**3); 
+            }
+            else{
+                reject("Number is too big for Cube " + num);
+            }
+        }, time);
+    });
+    return pr;
+}
+Promise.race([cube(300,3000), cube(4,2000), cube(5,5000)]).then(results=>console.log(results)).catch(err=>console.log('Error is ', err));
+Promise {<pending>}
+VM1377:14 64
+function cube(num,time){
+    var pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num<=10){
+                resolve(num**3); 
+            }
+            else{
+                reject("Number is too big for Cube " + num);
+            }
+        }, time);
+    });
+    return pr;
+}
+Promise.any([cube(300,3000), cube(4,2000), cube(5,5000)]).then(results=>console.log(results)).catch(err=>console.log('Error is ', err));
+Promise {<pending>}
+VM1395:14 64
+function cube(num,time){
+    var pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num<=10){
+                resolve(num**3); 
+            }
+            else{
+                reject("Number is too big for Cube " + num);
+            }
+        }, time);
+    });
+    return pr;
+}
+Promise.any([cube(300,1000), cube(4,2000), cube(5,5000)]).then(results=>console.log(results)).catch(err=>console.log('Error is ', err));
+Promise {<pending>}
+VM1406:14 64
+function cube(num,time){
+    var pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num<=10){
+                resolve(num**3); 
+            }
+            else{
+                reject("Number is too big for Cube " + num);
+            }
+        }, time);
+    });
+    return pr;
+}
+Promise.any([cube(300,1000), cube(4,20000), cube(5,5000)]).then(results=>console.log(results)).catch(err=>console.log('Error is ', err));
+Promise {<pending>}
+VM1414:14 125
+function cube(num,time){
+    var pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num<=10){
+                resolve(num**3); 
+            }
+            else{
+                reject("Number is too big for Cube " + num);
+            }
+        }, time);
+    });
+    return pr;
+}
+Promise.any([cube(300,1000), cube(114,20000), cube(2225,5000)]).then(results=>console.log(results)).catch(err=>console.log('Error is ', err));
+Promise {<pending>}
+VM1432:14 Error is  AggregateError: All promises were rejected

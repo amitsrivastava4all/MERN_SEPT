@@ -1,0 +1,112 @@
+function orderPizza(){
+    // Async Code Need to be Wrapped in Promise
+    var promise = new Promise((resolve , reject)=>{
+        // Async (Non Blocking)
+        setTimeout(()=>{
+        var meal = "Pizza is Prepared and Packed ";
+            resolve(meal);
+        }, 9000); // 9 Sec , Fn Call (setTimeout callBack)
+    });
+    return promise;
+    
+}
+var promise = orderPizza();
+console.log('Promise is ', promise);
+promise.then(pizza=>console.log(pizza)).catch(err=>console.log(err));
+VM1365:14 Promise is  Promise {<pending>}
+Promise {<pending>}
+VM1365:15 Pizza is Prepared and Packed 
+promise;
+Promise {<fulfilled>: 'Pizza is Prepared and Packed '}[[Prototype]]: Promise[[PromiseState]]: "fulfilled"[[PromiseResult]]: "Pizza is Prepared and Packed "
+function orderPizza(){
+    // Async Code Need to be Wrapped in Promise
+    var promise = new Promise((resolve , reject)=>{
+        // Async (Non Blocking)
+        setTimeout(()=>{
+        var meal = "Pizza Order is cancelled. ";
+            reject(meal);
+        }, 9000); // 9 Sec , Fn Call (setTimeout callBack)
+    });
+    return promise;
+    
+}
+var promise = orderPizza();
+console.log('Promise is ', promise);
+promise.then(pizza=>console.log(pizza)).catch(err=>console.log(err));
+VM1486:14 Promise is  Promise {<pending>}
+Promise {<pending>}
+VM1486:15 Pizza Order is cancelled. 
+function orderPizza(){
+    // Async Code Need to be Wrapped in Promise
+    var promise = new Promise((resolve , reject)=>{
+        // Async (Non Blocking)
+        setTimeout(()=>{
+        var meal = "Pizza Order is cancelled. ";
+            reject(meal);
+        }, 9000); // 9 Sec , Fn Call (setTimeout callBack)
+    });
+    return promise;
+    
+}
+var promise = orderPizza();
+console.log('Promise is ', promise);
+promise.then(pizza=>console.log('Data is ', pizza)).catch(err=>console.log('Error is ', err));
+VM1563:14 Promise is  Promise {<pending>}
+Promise {<pending>}
+VM1563:15 Error is  Pizza Order is cancelled. 
+function orderPizza(){
+    // Async Code Need to be Wrapped in Promise
+    var promise = new Promise((resolve , reject)=>{
+        // Async (Non Blocking)
+        setTimeout(()=>{
+        var meal = "Pizza Order is Confirmed and Out for Delievery. ";
+            resolve(meal);
+        }, 9000); // 9 Sec , Fn Call (setTimeout callBack)
+    });
+    return promise;
+    
+}
+var promise = orderPizza();
+console.log('Promise is ', promise);
+promise.then(pizza=>console.log('Data is ', pizza)).catch(err=>console.log('Error is ', err));
+VM1669:14 Promise is  Promise {<pending>}
+Promise {<pending>}
+VM1669:15 Data is  Pizza Order is Confirmed and Out for Delievery. 
+function orderPizza(){
+    // Async Code Need to be Wrapped in Promise
+    var promise = new Promise((resolve , reject)=>{
+        // Async (Non Blocking)
+        setTimeout(()=>{
+        var meal = "Pizza Order is Confirmed and Out for Delievery. ";
+            resolve(meal);
+            reject("hgjkdfhgjkd");
+        }, 9000); // 9 Sec , Fn Call (setTimeout callBack)
+    });
+    return promise;
+    
+}
+var promise = orderPizza();
+console.log('Promise is ', promise);
+promise.then(pizza=>console.log('Data is ', pizza)).catch(err=>console.log('Error is ', err));
+VM1721:15 Promise is  Promise {<pending>}
+Promise {<pending>}
+VM1721:16 Data is  Pizza Order is Confirmed and Out for Delievery. 
+function orderPizza(){
+    // Async Code Need to be Wrapped in Promise
+    var promise = new Promise((resolve , reject)=>{
+        // Async (Non Blocking)
+        setTimeout(()=>{
+        var meal = "Pizza Order is Confirmed and Out for Delievery. ";
+            resolve(meal);
+            
+        }, 9000); // 9 Sec , Fn Call (setTimeout callBack)
+    });
+    return promise;
+    
+}
+var promise = orderPizza();
+console.log('Promise is ', promise);
+promise.then(pizza=>console.log('Data is ', pizza)).catch(err=>console.log('Error is ', err));
+VM1758:15 Promise is  Promise {<pending>}
+Promise {<pending>}
+VM1758:16 Data is  Pizza Order is Confirmed and Out for Delievery. 

@@ -1,0 +1,17 @@
+function fourTime(t){
+    console.log('Final Result ',t);
+}
+function square(r){
+    setTimeout(()=>fourTime(r**4),3000);
+}
+
+function firstCube(e){
+    setTimeout(()=>square(e**2),3000);
+}
+function cube(num, fn){
+    setTimeout(()=>fn(num**3),2000);
+}
+cube(3,firstCube);
+
+undefined
+VM594:2 Final Result  282429536481
