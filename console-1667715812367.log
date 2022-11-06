@@ -1,0 +1,114 @@
+function cube(num,time){
+    var pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num<=10){
+                resolve(num**3); 
+            }
+            else{
+                reject("Number is too big for Cube " + num);
+            }
+        }, time);
+    });
+    return pr;
+}
+
+undefined
+console.log('Cube of 2 ');
+var p = cube(2,4000);
+p.then(data=>{
+    console.log('First Cube is ', data);
+    var p2 = cube(data,1000);
+    p2.then(data=>{
+        console.log('Second Cube is ', data);
+        var p3 = cube(data,5000);
+        p3.then(data=>{
+            console.log('Third Cube is ', data);
+        }).catch(err=>console.log('Third Cube Error ',err));
+    })}
+).catch(err=>console.log('Err ', err));
+
+       
+VM189:1 Cube of 2 
+Promise {<pending>}
+VM189:4 First Cube is  8
+VM189:7 Second Cube is  512
+VM189:11 Third Cube Error  Number is too big for Cube 512
+function cube(num,time){
+    var pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num<=10){
+                resolve(num**3); 
+            }
+            else{
+                reject("Number is too big for Cube " + num);
+            }
+        }, time);
+    });
+    return pr;
+}
+undefined
+function cube(num,time){
+    var pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num<=10){
+                resolve(num**3); 
+            }
+            else{
+                reject("Number is too big for Cube " + num);
+            }
+        }, time);
+    });
+    return pr;
+}
+undefined
+// await is used in async function
+// async function return result wrapped in promise
+function total(){
+    let t = await cube(3) + await cube(5) + await cube(2);
+    return t;
+}
+VM783:4 Uncaught SyntaxError: await is only valid in async functions and the top level bodies of modules
+// await is used in async function
+// async function return result wrapped in promise
+async function total(){
+    let t = await cube(3) + await cube(5) + await cube(2);
+    return t;
+}
+undefined
+var q = total();
+undefined
+q;
+Promise {<fulfilled>: 160}
+// await is used in async function
+// async function return result wrapped in promise
+async function total(){
+    let t = await cube(3,3000) + await cube(5,5000) + await cube(2,2000);
+    return t;
+}
+undefined
+var q = total();
+q.then(data=>console.log(data)).catch(err=>console.log('Error is ',err));
+Promise {<pending>}
+VM1251:2 160
+function cube(num,time){
+    console.log('NUm is ',num, 'Time is ', time);
+    var pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num<=10){
+                resolve(num**3); 
+            }
+            else{
+                reject("Number is too big for Cube " + num);
+            }
+        }, time);
+    });
+    return pr;
+}
+undefined
+var q = total();
+q.then(data=>console.log(data)).catch(err=>console.log('Error is ',err));
+VM1482:2 NUm is  3 Time is  3000
+Promise {<pending>}
+VM1482:2 NUm is  5 Time is  5000
+VM1482:2 NUm is  2 Time is  2000
+VM1488:2 160
