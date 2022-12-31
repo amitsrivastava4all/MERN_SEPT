@@ -1,0 +1,29 @@
+function show(){
+    console.log('I am show ', this.myName);
+}
+undefined
+show();
+VM289:2 I am show  undefined
+undefined
+window.show();
+VM289:2 I am show  undefined
+undefined
+window.myName;
+undefined
+var myName = 'Amit';
+undefined
+window.myName;
+'Amit'
+show();
+VM289:2 I am show  Amit
+undefined
+var obj = {myName:'Ram'};
+undefined
+window.show();
+VM289:2 I am show  Amit
+undefined
+var fn = window.show.bind(obj);
+undefined
+fn();
+VM289:2 I am show  Ram
+undefined
